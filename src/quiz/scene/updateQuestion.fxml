@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="quiz.scene.UpdateQuestion"
+          prefHeight="400.0" prefWidth="600.0" alignment="CENTER" style="-fx-background-color: white;">
+    <Text fx:id="header" text="Update multiple choice question" style="-fx-text-fill: black; -fx-font-size: 18; -fx-font-weight: bold;" GridPane.columnIndex="1" GridPane.rowIndex="0"></Text>
+    <HBox GridPane.rowIndex="1" prefHeight="30"></HBox>
+    <Label text="Question : " GridPane.columnIndex="0" GridPane.rowIndex="2"></Label>
+    <TextArea style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="questionTextField" wrapText="true" prefHeight="40"></TextArea>
+    <HBox GridPane.rowIndex="3" prefHeight="15"></HBox>
+    <Label text="Option 1 : " GridPane.columnIndex="0" GridPane.rowIndex="4"></Label>
+    <TextField style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" fx:id="option1TextField"></TextField>
+    <HBox GridPane.rowIndex="5" prefHeight="15"></HBox>
+    <Label text="Option 2 : " GridPane.columnIndex="0" GridPane.rowIndex="6"></Label>
+    <TextField style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="6" fx:id="option2TextField"></TextField>
+    <HBox GridPane.rowIndex="7" prefHeight="15"></HBox>
+    <Label text="Option 3 : " GridPane.columnIndex="0" GridPane.rowIndex="8"></Label>
+    <TextField style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="8" fx:id="option3TextField"></TextField>
+    <HBox GridPane.rowIndex="9" prefHeight="15"></HBox>
+    <Label text="Option 4 : " GridPane.columnIndex="0" GridPane.rowIndex="10"></Label>
+    <TextField style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="10" fx:id="option4TextField"></TextField>
+    <HBox GridPane.rowIndex="11" prefHeight="15"></HBox>
+    <Label text="Answer : " GridPane.columnIndex="0" GridPane.rowIndex="12"></Label>
+    <TextField style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="12" fx:id="answerTextField"></TextField>
+    <HBox GridPane.rowIndex="13" prefHeight="15"></HBox>
+    <Label text="Topic : " GridPane.columnIndex="0" GridPane.rowIndex="14"></Label>
+    <TextField style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="14" fx:id="topicTextField"></TextField>
+    <HBox GridPane.rowIndex="15" prefHeight="15"></HBox>
+    <Label text="Level : " GridPane.columnIndex="0" GridPane.rowIndex="16"></Label>
+    <TextField style="-fx-text-fill: black; -fx-prompt-text-fill: white;" GridPane.columnIndex="1" GridPane.rowIndex="16" fx:id="levelTextField"></TextField>
+    <HBox GridPane.rowIndex="17" prefHeight="30"></HBox>
+    <HBox GridPane.columnIndex="1" GridPane.rowIndex="18" spacing="30">
+        <Button text="Update" prefWidth="100" prefHeight="40" style="-fx-background-color:#1d8dee; -fx-text-fill:#ffffff;" onAction="#updateQuestion">
+        </Button>
+    </HBox>
+    <HBox GridPane.rowIndex="19" prefHeight="15"></HBox>
+    <HBox GridPane.rowIndex="20" GridPane.columnIndex="1" spacing="20">
+        <Label fx:id="errorText" style="-fx-text-fill: red;" text="">
+        </Label>
+        <Label fx:id="successText" style="-fx-text-fill: blue;" text="">
+        </Label>
+    </HBox>
+</GridPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="quiz.scene.Qna"
+            prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: white;"
+            fx:id="parent">
+    <AnchorPane AnchorPane.topAnchor="0.0" prefWidth="800" prefHeight="60" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, grey, 10, 0, 0, 0);">
+        <Label text="Topic:" style="-fx-text-fill: grey; -fx-font-size: 16; -fx-font-weight: bold;" layoutX="40" layoutY="25"></Label>
+        <Label fx:id="topicLabel" text="" style="-fx-text-fill: black; -fx-font-size: 16; -fx-font-weight: bold;" layoutX="95" layoutY="25"></Label>
+        <Label text="Level:" style="-fx-text-fill: grey; -fx-font-size: 16; -fx-font-weight: bold;" layoutX="700" layoutY="25"></Label>
+        <Label fx:id="levelLabel" text="" style="-fx-text-fill: black; -fx-font-size: 16; -fx-font-weight: bold;" layoutX="750" layoutY="25"></Label>
+    </AnchorPane>
+    <AnchorPane AnchorPane.bottomAnchor="0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, grey, 10, 0, 0, 0);" prefHeight="60" prefWidth="800">
+            <Button fx:id="primaryAction" style="-fx-background-color:#4a4a4a; -fx-text-fill:#ffffff;" text="Submit"
+                onAction="#submit" prefWidth="100" prefHeight="40" layoutX="40" layoutY="10"/>
+        <Button fx:id="backButton" style="-fx-background-color:#4a4a4a; -fx-text-fill:#ffffff;" text="Back" onAction="#backClicked" prefWidth="100" prefHeight="40" layoutY="10" layoutX="180"></Button>
+    </AnchorPane>
+
+</AnchorPane>

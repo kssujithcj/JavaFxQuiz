@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<FlowPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="quiz.scene.AdminController"
+          prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: white">
+        <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" prefWidth="800" prefHeight="60" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, grey, 10, 0, 0, 0);">
+                <Label text="Admin" style="-fx-text-fill: black; -fx-font-size: 18; -fx-font-weight: bold;" layoutX="365" layoutY="25"></Label>
+            <HBox layoutY="25" layoutX="750" onMouseClicked="#logout">
+                <ImageView fitWidth="20" fitHeight="20">
+                    <Image url="@../img/logout.png"/>
+                </ImageView>
+            </HBox>
+        </AnchorPane>
+        <TableView fx:id="qTable" GridPane.columnIndex="0" prefWidth="760">
+                <FlowPane.margin><Insets top="16" bottom="16" left="16" right="16"></Insets></FlowPane.margin>
+                <columns>
+                        <TableColumn fx:id="idCol" text="Id" prefWidth="40">
+                        </TableColumn>
+                        <TableColumn fx:id="questionCol" text="Question" prefWidth="230">
+                        </TableColumn>
+                        <TableColumn fx:id="option1Col" text="Option 1" prefWidth="80">
+                        </TableColumn>
+                        <TableColumn fx:id="option2Col" text="Option 2" prefWidth="80">
+                        </TableColumn>
+                        <TableColumn fx:id="option3Col" text="Option 3" prefWidth="80">
+                        </TableColumn>
+                        <TableColumn fx:id="option4Col" text="Option 4" prefWidth="80">
+                        </TableColumn>
+                        <TableColumn fx:id="answerCol" text="Answer" prefWidth="80">
+                        </TableColumn>
+                        <TableColumn fx:id="topicCol" text="topic" prefWidth="80">
+                        </TableColumn>
+                        <TableColumn fx:id="levelCol" text="level" prefWidth="40">
+                        </TableColumn>
+                </columns>
+        </TableView>
+        <Label alignment="CENTER" prefWidth="800" fx:id="errorText" GridPane.rowIndex="5" GridPane.columnIndex="1" style="-fx-text-fill: red;" text="">
+            <padding><Insets bottom="16"></Insets></padding>
+        </Label>
+        <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+                <Button text="Add" prefWidth="100" prefHeight="40" style="-fx-background-color:#4caf50; -fx-text-fill:#ffffff;" layoutX="40" onAction="#addQuestion"></Button>
+                <Button text="Remove" prefWidth="100" prefHeight="40" style="-fx-background-color:#df514c; -fx-text-fill:#ffffff;" layoutX="240" onAction="#removeQuestion"></Button>
+                <Button text="Update" prefWidth="100" prefHeight="40" style="-fx-background-color:#1d8dee; -fx-text-fill:#ffffff;" layoutX="440" onAction="#updateQuestion"></Button>
+                <Button text="Refresh" prefWidth="100" prefHeight="40" style="-fx-background-color:#4a4a4a; -fx-text-fill:#ffffff;" layoutX="640" onAction="#refreshData"></Button>
+        </AnchorPane>
+</FlowPane>
